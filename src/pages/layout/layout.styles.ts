@@ -54,10 +54,11 @@ export const Timer = styled.div<{ bg: string; colors: string }>`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<{ bg: string;}>`
   background: #ffffff;
   box-shadow: inset 0px -8px 8px 1px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
+  border:0 solid ${(props)=> props.bg};
 
   width: 331px;
   height: 65px;
@@ -66,7 +67,7 @@ export const Button = styled.button`
 
   font-weight: 600;
   font-size: 36px;
-  color: red;
+  color: ${(props)=> props.bg};
 
   &:hover {
     opacity: 1;
