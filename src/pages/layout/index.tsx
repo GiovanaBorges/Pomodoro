@@ -1,11 +1,12 @@
 import { LayoutContent, Navbar, Timer, Button } from "./layout.styles";
 import { styleColors } from "../../styles";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Layout() {
   const [btnText, setBtnText] = useState("Start");
   const [bgColor, setbgColor] = useState("#DA4747");
   const [color, setColor] = useState("#F86A6A");
+  const [time,setTime] = useState("25:00")
 
   function textStart() {
     btnText === "Start" ? setBtnText("Stop") : setBtnText("Start");
@@ -20,14 +21,17 @@ function Layout() {
     pomodoro() {
       setbgColor(styleColors.pomodoro.bgcolor);
       setColor(styleColors.pomodoro.color);
+      setTime("25:00")
     },
     short() {
       setbgColor(styleColors.short.bgcolor);
       setColor(styleColors.short.color);
+      setTime("05:00")
     },
     long() {
       setbgColor(styleColors.long.bgcolor);
       setColor(styleColors.long.color);
+      setTime("15:00")
     },
   };
 
@@ -43,8 +47,8 @@ function Layout() {
             <li onClick={changeColor.short}>Short break</li>
             <li onClick={changeColor.long}>Long break</li>
           </ul>
-          <h1>10:00</h1>
-          <Button onClick={textStart}>{btnText}</Button>
+          <h1>{time}</h1>
+          <Button onClick={textStart} bg={bgColor}>{btnText}</Button>
         </Timer>
       </LayoutContent>
     </>
