@@ -21,17 +21,17 @@ function Layout() {
     pomodoro() {
       setbgColor(styleColors.pomodoro.bgcolor);
       setColor(styleColors.pomodoro.color);
-      setTime("25:00")
+      setTime(styleColors.pomodoro.time)
     },
     short() {
       setbgColor(styleColors.short.bgcolor);
       setColor(styleColors.short.color);
-      setTime("05:00")
+      setTime(styleColors.short.time)
     },
     long() {
       setbgColor(styleColors.long.bgcolor);
       setColor(styleColors.long.color);
-      setTime("15:00")
+      setTime(styleColors.long.time)
     },
   };
 
