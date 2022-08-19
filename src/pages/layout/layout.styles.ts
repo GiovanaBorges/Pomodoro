@@ -46,6 +46,7 @@ export const Timer = styled.div<{ bg: string; colors: string }>`
     background-color: ${(props) => props.bg};
     padding: 0.5rem;
     border-radius: 9px;
+    cursor:pointer;
   }
 
   h1 {
@@ -54,16 +55,17 @@ export const Timer = styled.div<{ bg: string; colors: string }>`
   }
 `;
 
-export const Button = styled.button<{ bg: string;}>`
+export const Button = styled.button<{ bg: string;shadow:boolean;}>`
   background: #ffffff;
-  box-shadow: inset 0px -8px 8px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: ${(props)=> props.shadow? 'rgb(235 235 235) 0px 0px 0px;' :'rgb(235 235 235) 0px 6px 0px;'} 
   border-radius: 25px;
   border:0 solid ${(props)=> props.bg};
 
   width: 331px;
   height: 65px;
-  opacity: 0.6;
-  transition: 0.5s;
+  opacity: 0.9;
+  transition: 0.3s;
+  margin:0.5rem;
 
   font-weight: 600;
   font-size: 36px;
