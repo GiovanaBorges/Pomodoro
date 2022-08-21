@@ -43,11 +43,17 @@ export const Timer = styled.div<{ bg: string; colors: string }>`
   }
 
   li {
-    background-color: ${(props) => props.bg};
+    
     padding: 0.5rem;
     border-radius: 9px;
     cursor:pointer;
+
+    &:hover{
+      background-color: ${(props) => props.bg};
+    }
   }
+
+
 
   h1 {
     font-weight: 20;
