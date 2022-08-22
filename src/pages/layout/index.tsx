@@ -1,6 +1,6 @@
 import { LayoutContent, Navbar, Timer, Button } from "./layout.styles";
 import { styleColors } from "../../styles";
-import { useEffect, useState,useRef } from "react";
+import {useState,useRef } from "react";
 
 
 function Layout() {
