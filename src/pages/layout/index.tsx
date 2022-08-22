@@ -1,7 +1,7 @@
 import { LayoutContent, Navbar, Timer, Button } from "./layout.styles";
 import { styleColors } from "../../styles";
 import { useEffect, useState,useRef } from "react";
-import {Count} from "../../count"
+
 
 function Layout() {
   const [bgColor, setbgColor] = useState("#DA4747");
@@ -31,9 +31,8 @@ function Layout() {
       if(seconds === 0){
         if(minutesCurrent === 0 && seconds === 0 ){
           window.clearInterval(timeRef.current)
-          alert("the time is over")
-          new Audio('/assets/congratualations.wav').play()
-          window.location.reload()
+          new Audio('/assets/congratualations.mp3').play()
+          alert("The time is over")
           StopTime()
         }else{
           
