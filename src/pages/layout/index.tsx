@@ -21,7 +21,7 @@ function Layout() {
   }
 
   function Count(){
-    let seconds = 15
+    let seconds = 59
     let minutesCurrent = minutes
 
     timeRef.current = window.setInterval(()=>{
@@ -36,7 +36,7 @@ function Layout() {
           StopTime()
         }else{
           
-        setSeconds(seconds = 15)
+        setSeconds(seconds = 59)
         setMinutes(minutesCurrent -=1)
         }
       }
